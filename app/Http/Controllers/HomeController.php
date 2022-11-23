@@ -11,6 +11,6 @@ class HomeController extends Controller
      * @return string
      */
     public function index(){
-        return 'Welcome';
+        return view('welcome');
     }
 }
