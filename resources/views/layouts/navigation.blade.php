@@ -7,14 +7,13 @@
                 <div class="shrink-0 flex items-center">
                     <a @if(Request::routeIs('dashboard'))
                         href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800"></x-application-logo>
                         @else
                             href="{{ route('home') }}">
-                            <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                            <x-application-logo class="block h-9 w-auto fill-current text-gray-800"></x-application-logo>
                         @endif
                     </a>
                 </div>
-
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if(Request::routeIs('dashboard'))
@@ -28,6 +27,11 @@
                     @endif
                 </div>
             </div>
+            <!-- item -->
+            <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                <i class="fa fa-envelope-open-text text-md-left mr-1"></i>
+                My Inbox
+            </a>
             @if(Auth::check())
                 <!-- Settings Dropdown -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6">

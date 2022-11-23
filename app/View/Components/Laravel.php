@@ -7,15 +7,17 @@ use Illuminate\View\Component;
 class Laravel extends Component
 {
     public $name;
+    public $title;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name)
+    public function __construct($name,$title)
     {
         $this->name = $name;
+        $this->title = $title;
     }
 
     /**
@@ -25,6 +27,6 @@ class Laravel extends Component
      */
     public function render()
     {
-        return view('components.laravel')->with('name',$this->name);
+        return view('components.laravel');
     }
 }

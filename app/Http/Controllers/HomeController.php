@@ -11,6 +11,7 @@ class HomeController extends Controller
      * @return string
      */
     public function index(){
-        return view('welcome');
+        $title = 'Home Title 001';
+        return view('welcome',compact('title'));
     }
 }
